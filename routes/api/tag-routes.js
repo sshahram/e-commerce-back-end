@@ -42,8 +42,8 @@ router.get('/:id', (req, res) => {
     ]
   })
     .then(dbTagData => {
-      if(!dbTagData) {
-        res.status(404).json({message: 'No Tag found with this id'});
+      if (!dbTagData) {
+        res.status(404).json({ message: 'No Tag found with this id' });
         return;
       }
       res.json(dbTagData);
@@ -56,6 +56,14 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
   // create a new tag
+  Tag.create({
+    tag_name: req.body.tag_name
+  })
+    .then(dbTagData => res.json(dbTagData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
 router.put('/:id', (req, res) => {
