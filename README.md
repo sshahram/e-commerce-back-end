@@ -38,7 +38,7 @@ Run the following command "node server.js" multiple times in your terminal. Use 
 
 ## Demo
 Please click on the following link to see the Demo video for this project:
-[Link to Demo]()
+[Link to Demo](https://drive.google.com/file/d/1QAEkaCOJOgY6F98dSy6Yk-fNrMTF1aQB/view)
 
 ## Screenshots
 The first animation shows GET routes to return all categories, all products, and all tags being tested in Insomnia Core:
